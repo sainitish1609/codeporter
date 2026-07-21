@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+
+  <h1><%= title %></h1>
+
+  <% if (notes.length === 0) { %>
+    <p class="empty">No notes yet. <a href="/notes/new">Create one</a>.</p>
+  <% } else { %>
+    <ul class="note-list">
+      <% notes.forEach(function (note) { %>
+        <li class="note-item <%= note.pinned ? 'pinned' : '' %>">
+          <a href="/notes/<%= note.id %>"><%= note.title %></a>
+          <% if (note.pinned) { %><span class="badge">pinned</span><% } %>
+        </li>
+      <% }); %>
+    </ul>
+  <% } %>
+
+<%- include('partials/footer') %>

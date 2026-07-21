@@ -1,0 +1,14 @@
+{
+  "name": "notes-express",
+  "version": "1.0.0",
+  "description": "A medium-size Express notes web app (server-rendered pages + REST API) used as the source project for the Express->Flask converter.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

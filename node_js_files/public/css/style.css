@@ -1,0 +1,94 @@
+:root {
+  --bg: #f7f7f5;
+  --fg: #1f2328;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+.topbar nav a { margin-left: 16px; text-decoration: none; color: var(--accent); }
+
+.container { max-width: 720px; margin: 24px auto; padding: 0 20px; }
+
+h1 { font-size: 1.6rem; }
+
+.note-list { list-style: none; padding: 0; }
+.note-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.note-item.pinned { border-color: var(--accent); }
+.note-item a { text-decoration: none; color: var(--fg); font-weight: 600; }
+
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  background: #eff6ff;
+  border-radius: 999px;
+}
+
+.note-detail .body { white-space: pre-wrap; color: var(--fg); }
+
+.note-form { display: flex; flex-direction: column; gap: 14px; max-width: 480px; }
+.note-form label { display: flex; flex-direction: column; font-weight: 600; gap: 6px; }
+.note-form input[type="text"], .note-form textarea {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+.note-form .checkbox { flex-direction: row; align-items: center; gap: 8px; font-weight: 400; }
+
+button, .button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+button.danger { background: var(--danger); }
+form.inline { display: inline; }
+
+.empty, .muted { color: var(--muted); }
+.error { color: var(--danger); font-weight: 600; }
+
+.footer {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.footer a { color: var(--accent); }

@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+  <article class="note-detail">
+    <h1>
+      <%= note.title %>
+      <% if (note.pinned) { %><span class="badge">pinned</span><% } %>
+    </h1>
+    <p class="body"><%= note.body %></p>
+
+    <form method="POST" action="/notes/<%= note.id %>/delete" class="inline"
+          onsubmit="return confirm('Delete this note?');">
+      <button type="submit" class="danger">Delete</button>
+    </form>
+    <a href="/" class="button">Back</a>
+  </article>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+  <h1><%= title %></h1>
+
+  <% if (typeof error !== 'undefined' && error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <form method="POST" action="/notes" class="note-form">
+    <label>
+      Title
+      <input type="text" name="title" required />
+    </label>
+    <label>
+      Body
+      <textarea name="body" rows="5"></textarea>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="pinned" /> Pin this note
+    </label>
+    <button type="submit">Create</button>
+  </form>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,11 @@
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+mlx-env
+
+# Converter output
+outputs/
+_smoke.py
